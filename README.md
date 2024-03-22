@@ -222,7 +222,7 @@ We use 2 GPUs to train BRVE model on SMOID dataset.
 
 ## ❤️ Acknowledgement
 
-Our code is developed based on [BasicVSR++](https://github.com/ckkelvinchan/BasicVSR_PlusPlus) and [MMEditing](https://github.com/open-mmlab/mmagic) (MMagic now).
+Our code is developed based on [BasicVSR++](https://github.com/ckkelvinchan/BasicVSR_PlusPlus), [Shift-Net](https://github.com/dasongli1/Shift-Net) and [MMEditing](https://github.com/open-mmlab/mmagic) (MMagic now).
 
 The implementation of BNN is based on [BBCU](https://github.com/Zj-BinXia/BBCU) and [IRNet](https://github.com/htqin/IR-Net).
 
