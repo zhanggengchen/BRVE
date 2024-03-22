@@ -2,7 +2,7 @@
 
 This repository contains the official implementation of the following paper:
 
-Gengchen Zhang, [Yulun Zhang](https://yulunzhang.com/), [Xin Yuan](https://en.westlake.edu.cn/faculty/xin-yuan.html) and [Ying Fu](https://ying-fu.github.io/index.html). "Binarized Low-light Raw Video Enhancement", In *CVPR*, 2024.
+> Gengchen Zhang, [Yulun Zhang](https://yulunzhang.com/), [Xin Yuan](https://en.westlake.edu.cn/faculty/xin-yuan.html) and [Ying Fu](https://ying-fu.github.io/index.html). "Binarized Low-light Raw Video Enhancement", In *CVPR*, 2024.
 
 ## 🎥 Demo
 
