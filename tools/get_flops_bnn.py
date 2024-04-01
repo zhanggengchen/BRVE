@@ -71,7 +71,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-# CUDA_VISIBLE_DEVICES=5 python tools/get_flops_bnn.py configs/bnnvdv2_bbcu_seabs_llrvd_lr2e-4.py --shape 10 4 544 960
-# CUDA_VISIBLE_DEVICES=0 python tools/get_flops_bnn.py configs/bnnvdv3_bbcu_seabs_llrvd_lr2e-4.py --shape 100 4 128 128
-# CUDA_VISIBLE_DEVICES=2 python tools/get_flops_bnn.py configs/bnnvdv2_bbcu_seabsrep_llrvd_lr2e-4.py --shape 100 4 128 128
-# CUDA_VISIBLE_DEVICES=5 python tools/get_flops_bnn.py configs/bnnvdv2_bivit_llrvd_lr2e-4.py --shape 100 4 128 128
+# CUDA_VISIBLE_DEVICES=2 python tools/get_flops_bnn.py configs/BRVE_LLRVD.py --shape 100 4 128 128

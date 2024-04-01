@@ -340,9 +340,7 @@ def get_model_parameters_number(model):
     num_params = 0
     for name, param in model.named_parameters():
         if param.requires_grad:
-            print(name, param.numel())
-            if ("binary_conv.weight" in name) or ("binary_3x3.weights" in name) or ("binary_pw.weights" in name) or \
-            ("irbnnconv.weight" in name) or ("bnnconv.weight" in name) or ('proj.weight' in name) or ('qkv.weight' in name):
+            if ("binary_conv.weight" in name):
                 num_params += param.numel() // 32
             else:
                 num_params += param.numel()

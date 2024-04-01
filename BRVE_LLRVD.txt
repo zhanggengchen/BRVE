@@ -1,0 +1,2215 @@
+BRVE(
+  0.145 M, 48.303% Params, 146.925 GFLOPs, 100.000% FLOPs, 
+  (generator): BNNVD(
+    0.145 M, 48.303% Params, 146.925 GFLOPs, 100.000% FLOPs, 
+    (feat_extract): DABCWithInputConv(
+      0.001 M, 0.329% Params, 2.482 GFLOPs, 1.689% FLOPs, 
+      (main): Sequential(
+        0.001 M, 0.329% Params, 2.482 GFLOPs, 1.689% FLOPs, 
+        (0): Conv2d(0.001 M, 0.296% Params, 1.455 GFLOPs, 0.990% FLOPs, 4, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): LeakyReLU(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, negative_slope=0.1, inplace=True)
+        (2): Sequential(
+          0.0 M, 0.033% Params, 0.988 GFLOPs, 0.672% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.039 GFLOPs, 0.027% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (1): DABCConv2d(
+            0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.039 GFLOPs, 0.027% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (2): DABCConv2d(
+            0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.039 GFLOPs, 0.027% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+      )
+    )
+    (stage0): Sequential(
+      0.013 M, 4.366% Params, 9.701 GFLOPs, 6.603% FLOPs, 
+      (0): BNNUnet(
+        0.013 M, 4.366% Params, 9.701 GFLOPs, 6.603% FLOPs, 
+        (encoder_level1): Sequential(
+          0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.039 GFLOPs, 0.027% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+        (down12): BNNDownSample(
+          0.001 M, 0.417% Params, 0.715 GFLOPs, 0.487% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.086 GFLOPs, 0.059% FLOPs, Unsupport FLOPs: , 0.086 GFLOPs, 0.059% FLOPs, 24, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          (relu): RPReLU(
+            0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+          )
+          (conv_skip): Conv2d(0.001 M, 0.401% Params, 0.492 GFLOPs, 0.335% FLOPs, 24, 48, kernel_size=(1, 1), stride=(1, 1))
+          (pooling): AvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, kernel_size=2, stride=2, padding=0)
+        )
+        (encoder_level2): Sequential(
+          0.0 M, 0.057% Params, 0.693 GFLOPs, 0.472% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (1): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (2): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+        (down23): BNNDownSample(
+          0.005 M, 1.602% Params, 0.627 GFLOPs, 0.427% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.076 GFLOPs, 0.052% FLOPs, Unsupport FLOPs: , 0.076 GFLOPs, 0.052% FLOPs, 48, 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          (relu): RPReLU(
+            0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+          )
+          (conv_skip): Conv2d(0.005 M, 1.570% Params, 0.482 GFLOPs, 0.328% FLOPs, 48, 96, kernel_size=(1, 1), stride=(1, 1))
+          (pooling): AvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, kernel_size=2, stride=2, padding=0)
+        )
+        (encoder_level3): Sequential(
+          0.0 M, 0.105% Params, 0.546 GFLOPs, 0.372% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (1): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (2): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+        (decoder_level3): Sequential(
+          0.0 M, 0.105% Params, 0.546 GFLOPs, 0.372% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (1): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (2): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+        (skip_conv2): DABCConv2d(
+          0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+          )
+          (daca): DACA(
+            0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+            (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+            (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+            (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          )
+        )
+        (up32): BNNSkipUpSample(
+          0.005 M, 1.570% Params, 2.272 GFLOPs, 1.546% FLOPs, 
+          (up): Upsample(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, scale_factor=2.0, mode=bilinear)
+          (conv): BinaryConv2dSkip1x1(
+            0.005 M, 1.570% Params, 2.271 GFLOPs, 1.546% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 96, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (conv_skip): Conv2d(0.005 M, 1.554% Params, 1.907 GFLOPs, 1.298% FLOPs, 96, 48, kernel_size=(1, 1), stride=(1, 1))
+          )
+        )
+        (decoder_level2): Sequential(
+          0.0 M, 0.057% Params, 0.693 GFLOPs, 0.472% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (1): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (2): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+        (skip_conv1): DABCConv2d(
+          0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+          )
+          (daca): DACA(
+            0.0 M, 0.003% Params, 0.039 GFLOPs, 0.027% FLOPs, 
+            (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, output_size=1)
+            (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+            (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          )
+        )
+        (up21): BNNSkipUpSample(
+          0.001 M, 0.401% Params, 2.39 GFLOPs, 1.627% FLOPs, 
+          (up): Upsample(0.0 M, 0.000% Params, 0.002 GFLOPs, 0.001% FLOPs, scale_factor=2.0, mode=bilinear)
+          (conv): BinaryConv2dSkip1x1(
+            0.001 M, 0.401% Params, 2.389 GFLOPs, 1.626% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.079 GFLOPs, 0.054% FLOPs, Unsupport FLOPs: , 0.079 GFLOPs, 0.054% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 48, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            )
+            (conv_skip): Conv2d(0.001 M, 0.393% Params, 1.927 GFLOPs, 1.311% FLOPs, 48, 24, kernel_size=(1, 1), stride=(1, 1))
+          )
+        )
+        (decoder_level1): Sequential(
+          0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.039 GFLOPs, 0.027% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+      )
+    )
+    (stage1): ShiftEncoder(
+      0.115 M, 38.359% Params, 120.114 GFLOPs, 81.752% FLOPs, 
+      (conv_in): DABCConv2d(
+        0.0 M, 0.011% Params, 0.948 GFLOPs, 0.646% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.382 GFLOPs, 0.260% FLOPs, Unsupport FLOPs: , 0.382 GFLOPs, 0.260% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (relu): RPReLU(
+          0.0 M, 0.008% Params, 0.34 GFLOPs, 0.231% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.113 GFLOPs, 0.077% FLOPs, num_parameters=24)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+        )
+        (daca): DACA(
+          0.0 M, 0.003% Params, 0.113 GFLOPs, 0.077% FLOPs, 
+          (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, output_size=1)
+          (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+          (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (encoder_level0): ShiftBlock1(
+        0.0 M, 0.011% Params, 0.948 GFLOPs, 0.646% FLOPs, 
+        (body): DABCConv2d(
+          0.0 M, 0.011% Params, 0.948 GFLOPs, 0.646% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.382 GFLOPs, 0.260% FLOPs, Unsupport FLOPs: , 0.382 GFLOPs, 0.260% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.008% Params, 0.34 GFLOPs, 0.231% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.113 GFLOPs, 0.077% FLOPs, num_parameters=24)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+          )
+          (daca): DACA(
+            0.0 M, 0.003% Params, 0.113 GFLOPs, 0.077% FLOPs, 
+            (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, output_size=1)
+            (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+            (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          )
+        )
+      )
+      (encoder_level0_1): ShiftBlock1(
+        0.0 M, 0.011% Params, 0.948 GFLOPs, 0.646% FLOPs, 
+        (body): DABCConv2d(
+          0.0 M, 0.011% Params, 0.948 GFLOPs, 0.646% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.382 GFLOPs, 0.260% FLOPs, Unsupport FLOPs: , 0.382 GFLOPs, 0.260% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.008% Params, 0.34 GFLOPs, 0.231% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.113 GFLOPs, 0.077% FLOPs, num_parameters=24)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+          )
+          (daca): DACA(
+            0.0 M, 0.003% Params, 0.113 GFLOPs, 0.077% FLOPs, 
+            (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, output_size=1)
+            (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+            (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          )
+        )
+      )
+      (down01): BNNDownSample(
+        0.001 M, 0.417% Params, 2.06 GFLOPs, 1.402% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.248 GFLOPs, 0.169% FLOPs, Unsupport FLOPs: , 0.248 GFLOPs, 0.169% FLOPs, 24, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (relu): RPReLU(
+          0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+        )
+        (conv_skip): Conv2d(0.001 M, 0.401% Params, 1.416 GFLOPs, 0.963% FLOPs, 24, 48, kernel_size=(1, 1), stride=(1, 1))
+        (pooling): AvgPool2d(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, kernel_size=2, stride=2, padding=0)
+      )
+      (encoder_level1): ShiftBlock1(
+        0.0 M, 0.019% Params, 0.665 GFLOPs, 0.453% FLOPs, 
+        (body): DABCConv2d(
+          0.0 M, 0.019% Params, 0.665 GFLOPs, 0.453% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.382 GFLOPs, 0.260% FLOPs, Unsupport FLOPs: , 0.382 GFLOPs, 0.260% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+          )
+          (daca): DACA(
+            0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+            (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+            (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+            (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          )
+        )
+      )
+      (encoder_level1_1): ShiftBlock1(
+        0.0 M, 0.019% Params, 0.665 GFLOPs, 0.453% FLOPs, 
+        (body): DABCConv2d(
+          0.0 M, 0.019% Params, 0.665 GFLOPs, 0.453% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.382 GFLOPs, 0.260% FLOPs, Unsupport FLOPs: , 0.382 GFLOPs, 0.260% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+          )
+          (daca): DACA(
+            0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+            (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+            (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+            (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          )
+        )
+      )
+      (down12): BNNDownSample(
+        0.002 M, 0.801% Params, 0.959 GFLOPs, 0.653% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.11 GFLOPs, 0.075% FLOPs, Unsupport FLOPs: , 0.11 GFLOPs, 0.075% FLOPs, 48, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (relu): RPReLU(
+          0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+        )
+        (conv_skip): Conv2d(0.002 M, 0.785% Params, 0.694 GFLOPs, 0.472% FLOPs, 48, 48, kernel_size=(1, 1), stride=(1, 1))
+        (pooling): AvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, kernel_size=2, stride=2, padding=0)
+      )
+      (encoder_level2): DABCConv2d(
+        0.0 M, 0.019% Params, 0.166 GFLOPs, 0.113% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.096 GFLOPs, 0.065% FLOPs, Unsupport FLOPs: , 0.096 GFLOPs, 0.065% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (relu): RPReLU(
+          0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+        )
+        (daca): DACA(
+          0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+          (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+          (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+          (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (encoder_level2_1): DABCConv2d(
+        0.0 M, 0.019% Params, 0.166 GFLOPs, 0.113% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.096 GFLOPs, 0.065% FLOPs, Unsupport FLOPs: , 0.096 GFLOPs, 0.065% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (relu): RPReLU(
+          0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+        )
+        (daca): DACA(
+          0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+          (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+          (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+          (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (down23): BNNDownSample(
+        0.002 M, 0.801% Params, 0.24 GFLOPs, 0.163% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.027 GFLOPs, 0.019% FLOPs, Unsupport FLOPs: , 0.027 GFLOPs, 0.019% FLOPs, 48, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (relu): RPReLU(
+          0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+        )
+        (conv_skip): Conv2d(0.002 M, 0.785% Params, 0.173 GFLOPs, 0.118% FLOPs, 48, 48, kernel_size=(1, 1), stride=(1, 1))
+        (pooling): AvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, kernel_size=2, stride=2, padding=0)
+      )
+      (encoder_level3): DABCConv2d(
+        0.0 M, 0.019% Params, 0.042 GFLOPs, 0.028% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.024 GFLOPs, 0.016% FLOPs, Unsupport FLOPs: , 0.024 GFLOPs, 0.016% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (relu): RPReLU(
+          0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+        )
+        (daca): DACA(
+          0.0 M, 0.003% Params, 0.004 GFLOPs, 0.002% FLOPs, 
+          (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, output_size=1)
+          (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+          (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (encoder_level3_1): DABCConv2d(
+        0.0 M, 0.019% Params, 0.042 GFLOPs, 0.028% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.024 GFLOPs, 0.016% FLOPs, Unsupport FLOPs: , 0.024 GFLOPs, 0.016% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (relu): RPReLU(
+          0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+        )
+        (daca): DACA(
+          0.0 M, 0.003% Params, 0.004 GFLOPs, 0.002% FLOPs, 
+          (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, output_size=1)
+          (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+          (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (skip_conv0): DABCConv2d(
+        0.0 M, 0.011% Params, 0.948 GFLOPs, 0.646% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.382 GFLOPs, 0.260% FLOPs, Unsupport FLOPs: , 0.382 GFLOPs, 0.260% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (relu): RPReLU(
+          0.0 M, 0.008% Params, 0.34 GFLOPs, 0.231% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.113 GFLOPs, 0.077% FLOPs, num_parameters=24)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+        )
+        (daca): DACA(
+          0.0 M, 0.003% Params, 0.113 GFLOPs, 0.077% FLOPs, 
+          (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, output_size=1)
+          (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+          (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (skip_conv1): DABCConv2d(
+        0.0 M, 0.019% Params, 0.665 GFLOPs, 0.453% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.382 GFLOPs, 0.260% FLOPs, Unsupport FLOPs: , 0.382 GFLOPs, 0.260% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (relu): RPReLU(
+          0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+        )
+        (daca): DACA(
+          0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+          (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+          (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+          (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (skip_conv2): DABCConv2d(
+        0.0 M, 0.019% Params, 0.166 GFLOPs, 0.113% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.096 GFLOPs, 0.065% FLOPs, Unsupport FLOPs: , 0.096 GFLOPs, 0.065% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (relu): RPReLU(
+          0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+        )
+        (daca): DACA(
+          0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+          (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+          (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+          (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+      (decoder_level3): ShiftBlock2(
+        0.014 M, 4.819% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+        (encoder_1): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 0.31 GFLOPs, 0.211% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.005 GFLOPs, 0.004% FLOPs, Unsupport FLOPs: , 0.005 GFLOPs, 0.004% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.036 GFLOPs, 0.024% FLOPs, Unsupport FLOPs: , 0.036 GFLOPs, 0.024% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 0.258 GFLOPs, 0.176% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.066 GFLOPs, 0.045% FLOPs, Unsupport FLOPs: , 0.066 GFLOPs, 0.045% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.004 GFLOPs, 0.002% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_2): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 0.31 GFLOPs, 0.211% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.005 GFLOPs, 0.004% FLOPs, Unsupport FLOPs: , 0.005 GFLOPs, 0.004% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.036 GFLOPs, 0.024% FLOPs, Unsupport FLOPs: , 0.036 GFLOPs, 0.024% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 0.258 GFLOPs, 0.176% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.066 GFLOPs, 0.045% FLOPs, Unsupport FLOPs: , 0.066 GFLOPs, 0.045% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.004 GFLOPs, 0.002% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_3): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 0.31 GFLOPs, 0.211% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.005 GFLOPs, 0.004% FLOPs, Unsupport FLOPs: , 0.005 GFLOPs, 0.004% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.036 GFLOPs, 0.024% FLOPs, Unsupport FLOPs: , 0.036 GFLOPs, 0.024% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 0.258 GFLOPs, 0.176% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.066 GFLOPs, 0.045% FLOPs, Unsupport FLOPs: , 0.066 GFLOPs, 0.045% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.004 GFLOPs, 0.002% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_4): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 0.31 GFLOPs, 0.211% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.005 GFLOPs, 0.004% FLOPs, Unsupport FLOPs: , 0.005 GFLOPs, 0.004% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.036 GFLOPs, 0.024% FLOPs, Unsupport FLOPs: , 0.036 GFLOPs, 0.024% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 0.258 GFLOPs, 0.176% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.066 GFLOPs, 0.045% FLOPs, Unsupport FLOPs: , 0.066 GFLOPs, 0.045% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.004 GFLOPs, 0.002% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+      )
+      (decoder_level3_1): ShiftBlock2(
+        0.014 M, 4.819% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+        (encoder_1): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 0.31 GFLOPs, 0.211% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.005 GFLOPs, 0.004% FLOPs, Unsupport FLOPs: , 0.005 GFLOPs, 0.004% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.036 GFLOPs, 0.024% FLOPs, Unsupport FLOPs: , 0.036 GFLOPs, 0.024% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 0.258 GFLOPs, 0.176% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.066 GFLOPs, 0.045% FLOPs, Unsupport FLOPs: , 0.066 GFLOPs, 0.045% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.004 GFLOPs, 0.002% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_2): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 0.31 GFLOPs, 0.211% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.005 GFLOPs, 0.004% FLOPs, Unsupport FLOPs: , 0.005 GFLOPs, 0.004% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.036 GFLOPs, 0.024% FLOPs, Unsupport FLOPs: , 0.036 GFLOPs, 0.024% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 0.258 GFLOPs, 0.176% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.066 GFLOPs, 0.045% FLOPs, Unsupport FLOPs: , 0.066 GFLOPs, 0.045% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.004 GFLOPs, 0.002% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_3): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 0.31 GFLOPs, 0.211% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.005 GFLOPs, 0.004% FLOPs, Unsupport FLOPs: , 0.005 GFLOPs, 0.004% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.036 GFLOPs, 0.024% FLOPs, Unsupport FLOPs: , 0.036 GFLOPs, 0.024% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 0.258 GFLOPs, 0.176% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.066 GFLOPs, 0.045% FLOPs, Unsupport FLOPs: , 0.066 GFLOPs, 0.045% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.004 GFLOPs, 0.002% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_4): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 0.394 GFLOPs, 0.268% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 0.31 GFLOPs, 0.211% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.005 GFLOPs, 0.004% FLOPs, Unsupport FLOPs: , 0.005 GFLOPs, 0.004% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.036 GFLOPs, 0.024% FLOPs, Unsupport FLOPs: , 0.036 GFLOPs, 0.024% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 0.258 GFLOPs, 0.176% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.084 GFLOPs, 0.057% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.066 GFLOPs, 0.045% FLOPs, Unsupport FLOPs: , 0.066 GFLOPs, 0.045% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.011 GFLOPs, 0.007% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.004 GFLOPs, 0.002% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, Unsupport FLOPs: , 0.004 GFLOPs, 0.002% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.004 GFLOPs, 0.002% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.004 GFLOPs, 0.002% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+      )
+      (up32): BNNSkipUpSample(
+        0.002 M, 0.801% Params, 0.851 GFLOPs, 0.579% FLOPs, 
+        (up): Upsample(0.0 M, 0.000% Params, 0.005 GFLOPs, 0.003% FLOPs, scale_factor=2.0, mode=bilinear)
+        (conv): BinaryConv2dSkip1x1(
+          0.002 M, 0.801% Params, 0.846 GFLOPs, 0.576% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.096 GFLOPs, 0.065% FLOPs, Unsupport FLOPs: , 0.096 GFLOPs, 0.065% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+          )
+          (conv_skip): Conv2d(0.002 M, 0.785% Params, 0.694 GFLOPs, 0.472% FLOPs, 48, 48, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (decoder_level2): ShiftBlock2(
+        0.014 M, 4.819% Params, 6.307 GFLOPs, 4.293% FLOPs, 
+        (encoder_1): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 1.24 GFLOPs, 0.844% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.021 GFLOPs, 0.014% FLOPs, Unsupport FLOPs: , 0.021 GFLOPs, 0.014% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.143 GFLOPs, 0.098% FLOPs, Unsupport FLOPs: , 0.143 GFLOPs, 0.098% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 1.033 GFLOPs, 0.703% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_2): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 1.24 GFLOPs, 0.844% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.021 GFLOPs, 0.014% FLOPs, Unsupport FLOPs: , 0.021 GFLOPs, 0.014% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.143 GFLOPs, 0.098% FLOPs, Unsupport FLOPs: , 0.143 GFLOPs, 0.098% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 1.033 GFLOPs, 0.703% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_3): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 1.24 GFLOPs, 0.844% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.021 GFLOPs, 0.014% FLOPs, Unsupport FLOPs: , 0.021 GFLOPs, 0.014% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.143 GFLOPs, 0.098% FLOPs, Unsupport FLOPs: , 0.143 GFLOPs, 0.098% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 1.033 GFLOPs, 0.703% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_4): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 1.24 GFLOPs, 0.844% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.021 GFLOPs, 0.014% FLOPs, Unsupport FLOPs: , 0.021 GFLOPs, 0.014% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.143 GFLOPs, 0.098% FLOPs, Unsupport FLOPs: , 0.143 GFLOPs, 0.098% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 1.033 GFLOPs, 0.703% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+      )
+      (decoder_level2_1): ShiftBlock2(
+        0.014 M, 4.819% Params, 6.307 GFLOPs, 4.293% FLOPs, 
+        (encoder_1): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 1.24 GFLOPs, 0.844% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.021 GFLOPs, 0.014% FLOPs, Unsupport FLOPs: , 0.021 GFLOPs, 0.014% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.143 GFLOPs, 0.098% FLOPs, Unsupport FLOPs: , 0.143 GFLOPs, 0.098% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 1.033 GFLOPs, 0.703% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_2): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 1.24 GFLOPs, 0.844% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.021 GFLOPs, 0.014% FLOPs, Unsupport FLOPs: , 0.021 GFLOPs, 0.014% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.143 GFLOPs, 0.098% FLOPs, Unsupport FLOPs: , 0.143 GFLOPs, 0.098% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 1.033 GFLOPs, 0.703% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_3): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 1.24 GFLOPs, 0.844% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.021 GFLOPs, 0.014% FLOPs, Unsupport FLOPs: , 0.021 GFLOPs, 0.014% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.143 GFLOPs, 0.098% FLOPs, Unsupport FLOPs: , 0.143 GFLOPs, 0.098% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 1.033 GFLOPs, 0.703% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_4): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 1.577 GFLOPs, 1.073% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 1.24 GFLOPs, 0.844% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.021 GFLOPs, 0.014% FLOPs, Unsupport FLOPs: , 0.021 GFLOPs, 0.014% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.143 GFLOPs, 0.098% FLOPs, Unsupport FLOPs: , 0.143 GFLOPs, 0.098% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 1.033 GFLOPs, 0.703% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 0.336 GFLOPs, 0.229% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.042 GFLOPs, 0.029% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.014 GFLOPs, 0.010% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, Unsupport FLOPs: , 0.014 GFLOPs, 0.010% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.014 GFLOPs, 0.010% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.014 GFLOPs, 0.010% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+      )
+      (up21): BNNSkipUpSample(
+        0.002 M, 0.801% Params, 3.402 GFLOPs, 2.316% FLOPs, 
+        (up): Upsample(0.0 M, 0.000% Params, 0.019 GFLOPs, 0.013% FLOPs, scale_factor=2.0, mode=bilinear)
+        (conv): BinaryConv2dSkip1x1(
+          0.002 M, 0.801% Params, 3.383 GFLOPs, 2.303% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.382 GFLOPs, 0.260% FLOPs, Unsupport FLOPs: , 0.382 GFLOPs, 0.260% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+          )
+          (conv_skip): Conv2d(0.002 M, 0.785% Params, 2.775 GFLOPs, 1.888% FLOPs, 48, 48, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (decoder_level1): ShiftBlock2(
+        0.014 M, 4.819% Params, 25.226 GFLOPs, 17.169% FLOPs, 
+        (encoder_1): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_2): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_3): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_4): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+      )
+      (decoder_level1_1): ShiftBlock2(
+        0.014 M, 4.819% Params, 25.226 GFLOPs, 17.169% FLOPs, 
+        (encoder_1): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_2): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_3): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_4): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+      )
+      (decoder_level1_2): ShiftBlock2(
+        0.014 M, 4.819% Params, 25.226 GFLOPs, 17.169% FLOPs, 
+        (encoder_1): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_2): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_3): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+        (encoder_4): BBCUWithBinarizedInputConv(
+          0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+          (main): Sequential(
+            0.004 M, 1.205% Params, 6.307 GFLOPs, 4.292% FLOPs, 
+            (0): BinaryConv2dSkip1x1(
+              0.004 M, 1.186% Params, 4.962 GFLOPs, 3.377% FLOPs, 
+              (move0): LearnableBias(0.0 M, 0.000% Params, 0.085 GFLOPs, 0.058% FLOPs, Unsupport FLOPs: , 0.085 GFLOPs, 0.058% FLOPs, )
+              (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.573 GFLOPs, 0.390% FLOPs, Unsupport FLOPs: , 0.573 GFLOPs, 0.390% FLOPs, 72, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (relu): RPReLU(
+                0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+              )
+              (conv_skip): Conv2d(0.004 M, 1.170% Params, 4.133 GFLOPs, 2.813% FLOPs, 72, 48, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (1): Sequential(
+              0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+              (0): DABCConv2d(
+                0.0 M, 0.019% Params, 1.345 GFLOPs, 0.915% FLOPs, 
+                (move0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 1.062 GFLOPs, 0.723% FLOPs, Unsupport FLOPs: , 1.062 GFLOPs, 0.723% FLOPs, 48, 48, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (relu): RPReLU(
+                  0.0 M, 0.016% Params, 0.17 GFLOPs, 0.116% FLOPs, 
+                  (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                  (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.057 GFLOPs, 0.039% FLOPs, num_parameters=48)
+                  (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, Unsupport FLOPs: , 0.057 GFLOPs, 0.039% FLOPs, )
+                )
+                (daca): DACA(
+                  0.0 M, 0.003% Params, 0.057 GFLOPs, 0.039% FLOPs, 
+                  (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.057 GFLOPs, 0.039% FLOPs, output_size=1)
+                  (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+                  (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+                )
+              )
+            )
+          )
+        )
+      )
+      (up10): BNNUpSample(
+        0.001 M, 0.401% Params, 6.955 GFLOPs, 4.734% FLOPs, 
+        (up): Upsample(0.0 M, 0.000% Params, 0.075 GFLOPs, 0.051% FLOPs, scale_factor=2.0, mode=bilinear)
+        (conv): BinaryConv2dSkip1x1(
+          0.001 M, 0.401% Params, 6.88 GFLOPs, 4.682% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.226 GFLOPs, 0.154% FLOPs, Unsupport FLOPs: , 0.226 GFLOPs, 0.154% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.764 GFLOPs, 0.520% FLOPs, Unsupport FLOPs: , 0.764 GFLOPs, 0.520% FLOPs, 48, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.008% Params, 0.34 GFLOPs, 0.231% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.113 GFLOPs, 0.077% FLOPs, num_parameters=24)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+          )
+          (conv_skip): Conv2d(0.001 M, 0.393% Params, 5.549 GFLOPs, 3.777% FLOPs, 48, 24, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (conv_hr): BinaryConv2dSkip1x1(
+        0.001 M, 0.401% Params, 6.88 GFLOPs, 4.682% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.226 GFLOPs, 0.154% FLOPs, Unsupport FLOPs: , 0.226 GFLOPs, 0.154% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.764 GFLOPs, 0.520% FLOPs, Unsupport FLOPs: , 0.764 GFLOPs, 0.520% FLOPs, 48, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (relu): RPReLU(
+          0.0 M, 0.008% Params, 0.34 GFLOPs, 0.231% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.113 GFLOPs, 0.077% FLOPs, num_parameters=24)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+        )
+        (conv_skip): Conv2d(0.001 M, 0.393% Params, 5.549 GFLOPs, 3.777% FLOPs, 48, 24, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (conv_out): DABCConv2d(
+        0.0 M, 0.011% Params, 0.948 GFLOPs, 0.646% FLOPs, 
+        (move0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+        (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.382 GFLOPs, 0.260% FLOPs, Unsupport FLOPs: , 0.382 GFLOPs, 0.260% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (relu): RPReLU(
+          0.0 M, 0.008% Params, 0.34 GFLOPs, 0.231% FLOPs, 
+          (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+          (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.113 GFLOPs, 0.077% FLOPs, num_parameters=24)
+          (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, Unsupport FLOPs: , 0.113 GFLOPs, 0.077% FLOPs, )
+        )
+        (daca): DACA(
+          0.0 M, 0.003% Params, 0.113 GFLOPs, 0.077% FLOPs, 
+          (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.113 GFLOPs, 0.077% FLOPs, output_size=1)
+          (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+          (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+        )
+      )
+    )
+    (fusion): BinaryConv2dSkip1x1(
+      0.002 M, 0.593% Params, 3.505 GFLOPs, 2.385% FLOPs, 
+      (move0): LearnableBias(0.0 M, 0.000% Params, 0.118 GFLOPs, 0.080% FLOPs, Unsupport FLOPs: , 0.118 GFLOPs, 0.080% FLOPs, )
+      (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.398 GFLOPs, 0.271% FLOPs, Unsupport FLOPs: , 0.398 GFLOPs, 0.271% FLOPs, 72, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): RPReLU(
+        0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+        (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+        (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+        (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+      )
+      (conv_skip): Conv2d(0.002 M, 0.585% Params, 2.87 GFLOPs, 1.954% FLOPs, 72, 24, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (stage2): Sequential(
+      0.013 M, 4.366% Params, 9.701 GFLOPs, 6.603% FLOPs, 
+      (0): BNNUnet(
+        0.013 M, 4.366% Params, 9.701 GFLOPs, 6.603% FLOPs, 
+        (encoder_level1): Sequential(
+          0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.039 GFLOPs, 0.027% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+        (down12): BNNDownSample(
+          0.001 M, 0.417% Params, 0.715 GFLOPs, 0.487% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.086 GFLOPs, 0.059% FLOPs, Unsupport FLOPs: , 0.086 GFLOPs, 0.059% FLOPs, 24, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          (relu): RPReLU(
+            0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+          )
+          (conv_skip): Conv2d(0.001 M, 0.401% Params, 0.492 GFLOPs, 0.335% FLOPs, 24, 48, kernel_size=(1, 1), stride=(1, 1))
+          (pooling): AvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, kernel_size=2, stride=2, padding=0)
+        )
+        (encoder_level2): Sequential(
+          0.0 M, 0.057% Params, 0.693 GFLOPs, 0.472% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (1): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (2): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+        (down23): BNNDownSample(
+          0.005 M, 1.602% Params, 0.627 GFLOPs, 0.427% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.076 GFLOPs, 0.052% FLOPs, Unsupport FLOPs: , 0.076 GFLOPs, 0.052% FLOPs, 48, 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          (relu): RPReLU(
+            0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+          )
+          (conv_skip): Conv2d(0.005 M, 1.570% Params, 0.482 GFLOPs, 0.328% FLOPs, 48, 96, kernel_size=(1, 1), stride=(1, 1))
+          (pooling): AvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, kernel_size=2, stride=2, padding=0)
+        )
+        (encoder_level3): Sequential(
+          0.0 M, 0.105% Params, 0.546 GFLOPs, 0.372% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (1): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (2): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+        (decoder_level3): Sequential(
+          0.0 M, 0.105% Params, 0.546 GFLOPs, 0.372% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (1): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (2): DABCConv2d(
+            0.0 M, 0.035% Params, 0.182 GFLOPs, 0.124% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.032% Params, 0.029 GFLOPs, 0.020% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.032% Params, 0.01 GFLOPs, 0.007% FLOPs, num_parameters=96)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, Unsupport FLOPs: , 0.01 GFLOPs, 0.007% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.01 GFLOPs, 0.007% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.01 GFLOPs, 0.007% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+        (skip_conv2): DABCConv2d(
+          0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+          )
+          (daca): DACA(
+            0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+            (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+            (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+            (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          )
+        )
+        (up32): BNNSkipUpSample(
+          0.005 M, 1.570% Params, 2.272 GFLOPs, 1.546% FLOPs, 
+          (up): Upsample(0.0 M, 0.000% Params, 0.001 GFLOPs, 0.001% FLOPs, scale_factor=2.0, mode=bilinear)
+          (conv): BinaryConv2dSkip1x1(
+            0.005 M, 1.570% Params, 2.271 GFLOPs, 1.546% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 96, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (conv_skip): Conv2d(0.005 M, 1.554% Params, 1.907 GFLOPs, 1.298% FLOPs, 96, 48, kernel_size=(1, 1), stride=(1, 1))
+          )
+        )
+        (decoder_level2): Sequential(
+          0.0 M, 0.057% Params, 0.693 GFLOPs, 0.472% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (1): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+          (2): DABCConv2d(
+            0.0 M, 0.019% Params, 0.231 GFLOPs, 0.157% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.016% Params, 0.059 GFLOPs, 0.040% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.016% Params, 0.02 GFLOPs, 0.013% FLOPs, num_parameters=48)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, Unsupport FLOPs: , 0.02 GFLOPs, 0.013% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.02 GFLOPs, 0.013% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.02 GFLOPs, 0.013% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+        (skip_conv1): DABCConv2d(
+          0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+          (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+          (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (relu): RPReLU(
+            0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+            (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+            (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+          )
+          (daca): DACA(
+            0.0 M, 0.003% Params, 0.039 GFLOPs, 0.027% FLOPs, 
+            (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, output_size=1)
+            (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+            (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+          )
+        )
+        (up21): BNNSkipUpSample(
+          0.001 M, 0.401% Params, 2.39 GFLOPs, 1.627% FLOPs, 
+          (up): Upsample(0.0 M, 0.000% Params, 0.002 GFLOPs, 0.001% FLOPs, scale_factor=2.0, mode=bilinear)
+          (conv): BinaryConv2dSkip1x1(
+            0.001 M, 0.401% Params, 2.389 GFLOPs, 1.626% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.079 GFLOPs, 0.054% FLOPs, Unsupport FLOPs: , 0.079 GFLOPs, 0.054% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.265 GFLOPs, 0.181% FLOPs, Unsupport FLOPs: , 0.265 GFLOPs, 0.181% FLOPs, 48, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            )
+            (conv_skip): Conv2d(0.001 M, 0.393% Params, 1.927 GFLOPs, 1.311% FLOPs, 48, 24, kernel_size=(1, 1), stride=(1, 1))
+          )
+        )
+        (decoder_level1): Sequential(
+          0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+          (0): DABCConv2d(
+            0.0 M, 0.011% Params, 0.329 GFLOPs, 0.224% FLOPs, 
+            (move0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            (binary_conv): HardBinaryConv(0.0 M, 0.000% Params, 0.133 GFLOPs, 0.090% FLOPs, Unsupport FLOPs: , 0.133 GFLOPs, 0.090% FLOPs, 24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (relu): RPReLU(
+              0.0 M, 0.008% Params, 0.118 GFLOPs, 0.080% FLOPs, 
+              (pr_bias0): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+              (pr_prelu): PReLU(0.0 M, 0.008% Params, 0.039 GFLOPs, 0.027% FLOPs, num_parameters=24)
+              (pr_bias1): LearnableBias(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, Unsupport FLOPs: , 0.039 GFLOPs, 0.027% FLOPs, )
+            )
+            (daca): DACA(
+              0.0 M, 0.003% Params, 0.039 GFLOPs, 0.027% FLOPs, 
+              (avg_pool): AdaptiveAvgPool2d(0.0 M, 0.000% Params, 0.039 GFLOPs, 0.027% FLOPs, output_size=1)
+              (conv): Conv1d(0.0 M, 0.003% Params, 0.0 GFLOPs, 0.000% FLOPs, 3, 1, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+              (sigmoid): Sigmoid(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+            )
+          )
+        )
+      )
+    )
+    (conv_out): Conv2d(0.001 M, 0.290% Params, 1.422 GFLOPs, 0.968% FLOPs, 24, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (pixel_loss): CharbonnierLoss(0.0 M, 0.000% Params, 0.0 GFLOPs, 0.000% FLOPs, )
+)
+==============================
+Input shape: (100, 4, 128, 128)
+Flops: 146.92 GFLOPs
+Params: 299.59 k
+==============================
