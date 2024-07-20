@@ -242,10 +242,11 @@ We thank these public repositories for their excellent code.
 
 ## 🖊️ Citation
 ```
-@article{BRVE_arxiv_2024,
-title={Binarized Low-light Raw Video Enhancement}, 
-author={Gengchen Zhang and Yulun Zhang and Xin Yuan and Ying Fu},
-journal={arXiv preprint arXiv:2403.19944},
-year={2024}
+@inproceedings{BRVE_2024_CVPR,
+  title={Binarized Low-light Raw Video Enhancement},
+  author={Zhang, Gengchen and Zhang, Yulun and Yuan, Xin and Fu, Ying},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={25753-25762},
+  year={2024}
 }
 ```
