@@ -1,3 +1,5 @@
+
+
 # Binarized Low-light Raw Video Enhancement
 
 This repository contains the official implementation of the following paper:
@@ -69,6 +71,8 @@ Directly download datasets to `datasets/` or use symbolic link.
 ln -s path_to_LLRVD datasets/LLRVD
 ln -s path_to_SMOID datasets/SMOID
 ```
+
+Additionally, ensure the `data_list` directory (containing the train/val/test splits) is placed in the repository root, as it is required by the configuration files.
 
 <details close>
 <summary><b> Datasets should be organized as follows (Click to expand) : </b></summary>
